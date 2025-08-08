@@ -2,7 +2,7 @@ package org.example;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.model.Ticket;
-import org.example.model.TicketList;
+import org.example.model.TicketsList;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +15,7 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        TicketList ticketsList = mapper.readValue(new File("tickets.json"), TicketList.class);
+        TicketsList ticketsList = mapper.readValue(new File("tickets.json"), TicketsList.class);
 
         Map<String, Duration> minDuration = new HashMap<>();
 
